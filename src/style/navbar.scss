@@ -1,0 +1,83 @@
+@use './mixins' as *;
+@use './variavles' as *;
+
+.navbar{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 3.8rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: $text-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo{
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: absolute;
+        left: 50px;
+        padding: 1rem;
+        a{
+            color: #ff0;
+        }
+    }
+    nav.link-nav{
+        position: absolute;
+        right: 50px;
+        ul{
+            display: flex;
+            justify-content: right;
+            margin: 3rem;
+            align-items: center;
+            gap: 2rem;
+            li{
+                flex: 1;
+                a{
+                    color: $text-color;
+                    padding: 10px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .hamburger{
+        display: none;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+    @include respond(mobile){
+        flex-direction: column;
+        align-items: flex-end;
+        nav.link-nav{
+            display: none;
+        }
+        .hamburger{
+            display: block;
+        }
+        .mobile-menu{
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            width: 22vw;
+            height: 100vh;
+            padding: 1.2rem;
+            padding-top: 4.5rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            ul li{
+                line-height: 2;
+                a{
+                    font-size: 1.2rem;
+                }
+                a:hover{
+                    color: #ff0;
+                }
+            }
+        }
+    }
+
+}
