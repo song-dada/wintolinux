@@ -14,11 +14,15 @@ const Home = () => {
     <div className='home'>
       <div className='section1'>
         <Setion1 />
-        <ScrollBtn scrollToRef={section2ref} />
+        <ScrollBtn scrollToRef={section2ref} ctop={false} />
       </div>
       <div className='section1'>
         <Setion2 />
-        <ScrollBtn scrollToRef={section3ref} />
+        <ScrollBtn scrollToRef={section3ref} ctop={true}/>
+      </div>
+      <div className='section1'>
+        <Setion3 />
+        <ScrollBtn scrollToRef={section3ref} ctop={true}/>
       </div>
     </div>
   )
