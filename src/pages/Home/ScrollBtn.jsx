@@ -1,7 +1,8 @@
 import React from 'react';
+import { scb } from './ScrollBtn';
 import '../../style/scrollBtn.scss';
 
-// const scb = ( { scrollToRef, ctop } )=>{
+// export const scb = ( { scrollToRef, ctop } )=>{
 //   const scrollDonw =()=>{
 //     // scrollToRef && 과 같음
 //     if(scrollToRef?.crrent){
