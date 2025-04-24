@@ -1,8 +1,16 @@
+// @use './base'; // 초기 값
+@use './mixins'; // 함수 : 빅스인 사용용
+@use './variavles'; // 함수 : 변수이름 선포
+// main.scss에서 불들이면 베이스는 전역으로 뿌리기 때문에 다시 파일에서 엎어쓰지 않으면 그냥 적용됨.
+// 베이스를 이중으로 가져다 쓸 필요는 없기 때문에 main외의 파일에서는 use하지 않아도 됨.
+
 .home{
     position: absolute;
     width: 100vw;
     .section1{
         position: relative;
-        background-color: aquamarine;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
     }
 }

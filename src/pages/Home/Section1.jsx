@@ -28,15 +28,17 @@ const Section1 = () => {
         {/* modules={[Autoplay]} 사용선언 후 autoplay 이거 선언 해줘야함 스와이퍼에 대한.설정*/}
         {
           movefile.map((item, index) => (
-            <SwiperSlide key={index}>
-              <video src={`/movefile/${item}`}
-                autoPlay muted loop playsInline />
-              {/* 여기서의 autoplay는 비디오 실행. */}
+            <SwiperSlide className='swiper-slide' key={index}>
+              <div className="video-div">
+                <video src={`/movefile/${item}`}
+                  autoPlay muted loop playsInline />
+                {/* 여기서의 autoplay는 비디오 실행. */}
+              </div>
             </SwiperSlide>
           ))
         }
       </Swiper>
-      <div className="textCenter" >
+      <div className="text-area" >
         <h1 onClick={clickSubTitle} >Welcome To Our Site</h1>
         <h3 ref={subtitle} style={{ display: 'none' }}>Hava a Nice Day</h3>
       </div>
