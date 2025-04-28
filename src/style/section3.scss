@@ -1,0 +1,31 @@
+.s3{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1000ms ease;
+
+        &.active{
+            transform: scale(0.5);
+        }
+    }
+    h2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 1500ms ease;
+        z-index: 10;
+
+        &.text-active{
+            transform: translate(-50%, -50%) scale(2);
+        }
+    }
+}
